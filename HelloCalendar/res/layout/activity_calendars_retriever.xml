@@ -9,46 +9,35 @@
     tools:context="com.example.hellocalendar.HelloCalendarMain" >
 
     <TextView
-        android:id="@+id/mainactivitytitle"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:text="@string/select_test"
+        android:text="@string/hello_greeting"
         android:textSize="25sp"
         android:textStyle="bold"
         android:typeface="sans" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/hello_button" 
+        android:onClick="onButtonClick" />
     
     
-    <!-- <TextView 
+    <TextView 
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:textStyle="italic"
-        /> -->
-
-    <Button
-        android:id="@+id/option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainactivitytitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:onClick="onOption1Click"
-        android:text="@string/cal_retriever"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/option1"
-        android:layout_centerHorizontal="true"
-        android:text="@string/cal_maker"
-        android:textSize="12sp" 
-        android:onClick="onOption2Click"/>
+        />
 
 </RelativeLayout>

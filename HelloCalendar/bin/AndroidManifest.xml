@@ -8,6 +8,8 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -21,6 +23,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalendarsRetriever"
+            android:label="@string/title_activity_calendars_retriever" >
+        </activity>
+        <activity
+            android:name=".CalendarMaker"
+            android:label="@string/title_activity_calendar_maker" >
         </activity>
     </application>
 

@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Generated || App-wide strings -->
     <string name="app_name">HelloCalendar</string>
-    <string name="hello_greeting">Tap for Greeting</string>
     <string name="action_settings">Settings</string>
     <string name="hello_button">Tap Meh!</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Main activity -->
+    <string name="select_test">Select a trial:</string>
+    <string name="cal_retriever">Calendar Retriever</string>
+
+    <!-- Calendar retriever -->
+    <string name="title_activity_calendars_retriever">CalendarsRetriever</string>
+    <string name="hello_greeting">Tap for Greeting</string>
+
+    <!-- Calendar Maker -->
+    <string name="calendarmake">Tap to Make Calendar</string>
+    <string name="title_activity_calendar_maker">Calendar Maker</string>
+    <string name="cal_maker">Calendar Maker</string>
 
 </resources>

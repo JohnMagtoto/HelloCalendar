@@ -1,13 +1,17 @@
 package com.example.hellocalendar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class HelloCalendarMain extends Activity {
 
+	
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,4 +37,15 @@ public class HelloCalendarMain extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    public void onOption1Click(View view){
+    	Intent intent = new Intent(this, CalendarsRetriever.class) ;
+    	startActivity(intent) ;
+    } 
+    
+    public void onOption2Click(View view) {
+    	Intent intent = new Intent(this, CalendarMaker.class) ;
+    	startActivity(intent) ;
+    }
+   
 }
