@@ -1,17 +1,17 @@
 package com.example.hellocalendar;
 
-import java.net.URI;
-
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract.Calendars;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 public class CalendarMaker extends Activity {
-
+	private static final String TAG = "CalendarMaker" ;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,10 +38,14 @@ public class CalendarMaker extends Activity {
 	}
 	
 	public void onTapMe(View view) {
-		
+		Uri uri = _asSyncAdapter(Calendars.CONTENT_URI, "crashdummy.enceladus@gmail.com", "com.google") ;
+		Log.i(TAG, uri.toString()) ;
 	}
 	
-	static Uri asSyncAdapter(Uri uri, String account, String accountType) {
+	/*
+	 * Helper stub for use to append to URI the required parameters for use in SyncAdapter class
+	 */
+	protected static Uri _asSyncAdapter(Uri uri, String account, String accountType) {
 	    return uri.buildUpon()
 	        .appendQueryParameter(android.provider.CalendarContract.CALLER_IS_SYNCADAPTER,"true")
 	        .appendQueryParameter(Calendars.ACCOUNT_NAME, account)

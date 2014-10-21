@@ -27,6 +27,7 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="@string/hello_button" />
+        android:text="@string/hello_button"
+        android:onClick="onTapMe" />
 
 </RelativeLayout>
