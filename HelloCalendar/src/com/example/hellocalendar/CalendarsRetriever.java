@@ -16,7 +16,6 @@ public class CalendarsRetriever extends Activity {
 	private Cursor mCursor =  null ;
 	private final static String[] COLUMNS = new String[] 
 			{CalendarContract.Calendars.CALENDAR_DISPLAY_NAME} ;
-	private final static String HELLOCAL = "hello_calendar" ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,8 @@
 package com.example.hellocalendar;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract.Calendars;
@@ -11,6 +13,7 @@ import android.view.View;
 
 public class CalendarMaker extends Activity {
 	private static final String TAG = "CalendarMaker" ;
+	private Cursor mCursor =  null ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +42,11 @@ public class CalendarMaker extends Activity {
 	
 	public void onTapMe(View view) {
 		Uri uri = _asSyncAdapter(Calendars.CONTENT_URI, "crashdummy.enceladus@gmail.com", "com.google") ;
-		Log.i(TAG, uri.toString()) ;
+		ContentValues values = new ContentValues() ;
+		values.put(Calendars.CALENDAR_DISPLAY_NAME, "Test") ;
+		getContentResolver().insert(uri, values) ;
+		getContentResolver().requestSync(account, authority, extras) ;
+		Log.d(TAG, "Inserted calendar to CrashDummy") ;
 	}
 	
 	/*
